@@ -224,14 +224,15 @@ def main():
     
     return
 
-# Hotkey 'Shift' to start the program
-def onKey():
-    main()
-
-keyboard.add_hotkey('shift', onKey)
-
-print("Click on the wordle grid and press 'shift' to solve. Press 'esc' to quit.")
-
-keyboard.wait('esc')
+if __name__ == "__main__":
+    # Hotkey 'Shift' to start the program
+    def onKey():
+        main()
+    
+    keyboard.add_hotkey('shift', onKey)
+    
+    print("Click on the wordle grid and press 'shift' to solve. Press 'esc' to quit.")
+    
+    keyboard.wait('esc')
 
 
